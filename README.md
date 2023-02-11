@@ -32,7 +32,7 @@ The API supports:
   - Receives an encrypted message from a user specified by their name
   - If they have not previously communicated, this method sets up the session by generating the necessary double ratchet keys according to the Signal specs
   - If tampering of message is detected, this method returns *None*
-- **Client.report(name, message)
+- **Client.report(name, message)**
   - Creates an abuse report with the provided name and message
   - CCA-secure El-Gamal encryption scheme is used to encrypt the report
 - **Server.signCertificate(certificate)**
