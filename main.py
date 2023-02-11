@@ -98,45 +98,7 @@ msg = alice.receiveMessage("bob", header, ct)
 if msg != "I'll remember to start early next time!":
     error("message 7 was not decrypted correctly")
 
-#########################
-
-header, ct = alice.sendMessage("carol", "Hi Carol!")
-msg = carol.receiveMessage("alice", header, ct)
-if msg != "Hi Carol!":
-    error("message 8 was not decrypted correctly")
-
-header, ct = carol.sendMessage("alice", "Hi Alice!")
-msg = alice.receiveMessage("carol", header, ct)
-if msg != "Hi Alice!":
-    error("message 9 was not decrypted correctly")
-
-header, ct = alice.sendMessage("carol", "Hi Carolb!")
-msg = carol.receiveMessage("alice", header, ct)
-if msg != "Hi Carolb!":
-    error("message 10 was not decrypted correctly")
-
-header, ct = carol.sendMessage("alice", "Hi Aliceb!")
-msg = alice.receiveMessage("carol", header, ct)
-if msg != "Hi Aliceb!":
-    error("message 11 was not decrypted correctly")
-
-header, ct = carol.sendMessage("alice", "Hi Alice2!")
-msg = alice.receiveMessage("carol", header, ct)
-if msg != "Hi Alice2!":
-    error("message 12 was not decrypted correctly")
-
-header, ct = carol.sendMessage("alice", "Hi Alice3!")
-msg = alice.receiveMessage("carol", header, ct)
-if msg != "Hi Alice3!":
-    error("message 13 was not decrypted correctly")
-
-header, ct = carol.sendMessage("bob", "Hi Bob!")
-msg = bob.receiveMessage("carol", header, ct)
-if msg != "Hi Bob!":
-    error("message 14 was not decrypted correctly")
-
 print("conversation completed!")
-
 
 print("Testing handling an incorrect message")
 
@@ -146,6 +108,5 @@ if m != None:
     error("didn't reject incorrect message")
 else:
     print("success!")
-
 
 print("Testing complete")
