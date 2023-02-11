@@ -29,7 +29,7 @@ The API supports:
   - Sends an encrypted message to a user specified by their name
   - If they have not previously communicated, this method sets up the session by generating the necessary double ratchet keys according to the Signal specs
 - **Client.receiveMessage(name, header, ciphertext)**
-  - Receives and encrypted message from a user specified by their name
+  - Receives an encrypted message from a user specified by their name
   - If they have not previously communicated, this method sets up the session by generating the necessary double ratchet keys according to the Signal specs
   - If tampering of message is detected, this method returns *None*
 - **Client.report(name, message)
