@@ -15,7 +15,7 @@ for the platform can review abusive messages. The Double Ratchet provides **forw
 - Dropped or out-of-order messages are not handled (section 2.6 is ignored)
 
 Further specifications
-- Every client creates an intial DH key pair, which will be used to derive root keys for new communication sessions
+- Every client creates an initial DH key pair, which will be used to derive root keys for new communication sessions
 - Public keys are distributed through simple certificates. Each client generates his own certificate upon initialization which includes its public key.
 
 The API supports:
